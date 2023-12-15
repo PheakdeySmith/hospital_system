@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="form_container">
-                    <form action="{{ route('contact.store') }}" method="post">
+                    <form action="{{ route('contacts.store') }}" method="post">
                         @csrf <!-- Add CSRF token for security -->
 
                         <div>
@@ -23,6 +23,7 @@
                         <div>
                             <textarea name="message" class="message-box" placeholder="Message"></textarea>
                         </div>
+                        <input type="hidden" name="form_source" value="front">
                         <div class="btn_box">
                             <button type="submit">
                                 SEND

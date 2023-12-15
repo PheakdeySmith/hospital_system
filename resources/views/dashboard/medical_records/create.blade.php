@@ -53,12 +53,12 @@
                                     </div>
 
                                     <div class="col-md-4">
-                                        <!-- Department -->
+                                        <!-- Appointment -->
                                         <div class="form-group">
-                                            <label for="department_id" class="form-label">Department:</label>
-                                            <select name="department_id" class="form-control" id="department_id">
-                                                @foreach($departments as $department)
-                                                    <option value="{{ $department->id }}">{{ $department->department_name }}</option>
+                                            <label for="appointment_id" class="form-label">Appointment:</label>
+                                            <select name="appointment_id" class="form-control" id="appointment_id">
+                                                @foreach($appointments as $appointment)
+                                                    <option value="{{ $appointment->id }}">{{ $appointment->id }}</option>
                                                 @endforeach
                                             </select>
                                         </div>

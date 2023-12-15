@@ -16,7 +16,8 @@ class DepartmentController extends Controller
 
     public function create()
     {
-        return view('dashboard.departments.create');
+        $data['departments'] = Department::all();
+        return view('dashboard.departments.create', $data);
     }
 
     public function store(Request $request)

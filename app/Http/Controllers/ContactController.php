@@ -15,7 +15,8 @@ class ContactController extends Controller
 
     public function create()
     {
-        return view('dashboard.contacts.create');
+        $data['contacts'] = Contact::all();
+        return view('dashboard.contacts.create', $data);
     }
 
     public function store(Request $request)
@@ -30,12 +31,13 @@ class ContactController extends Controller
 
         Contact::create($request->all());
 
-        return redirect()->route('contacts.index')->with('success', 'Contact created successfully');
+        return redirect()->route($redirectRoute)->with('success', 'Contact created successfully');
     }
 
     public function edit(Contact $contact)
     {
-        return view('dashboard.contacts.edit', compact('contact'));
+        $data['contacts'] = Contact::all();
+        return view('dashboard.contacts.edit', $data);
     }
 
     public function update(Request $request, Contact $contact)

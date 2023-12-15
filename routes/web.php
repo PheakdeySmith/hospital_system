@@ -22,8 +22,8 @@ Route::post('/appointments/store', [AppointmentController::class, 'store'])->nam
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/doctor', [FrontController::class, 'doctor'])->name('doctor');
 Route::get('/treatment', [FrontController::class, 'treatment'])->name('treatment');
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.front');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
+Route::post('/contacts/store', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/client', [FrontController::class, 'client'])->name('client');
 
 // Dashboard Route
@@ -142,3 +142,4 @@ Route::prefix('/contacts')->middleware('web')->group(function () {
     Route::put('/{contact}', [ContactController::class, 'update'])->name('contacts.update');
     Route::delete('/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 });
+

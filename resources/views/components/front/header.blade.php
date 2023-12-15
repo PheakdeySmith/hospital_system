@@ -54,7 +54,7 @@
                         <a class="nav-link" href="{{ route('client') }}">Testimonial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact.front') }}">Contact Us</a>
+                        <a class="nav-link" href="{{ route('front.contact') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>
