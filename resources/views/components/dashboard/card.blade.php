@@ -7,12 +7,11 @@
                         <i class="zmdi zmdi-account-o"></i>
                     </div>
                     <div class="text">
-                        <h2>10368</h2>
-                        <span>members online</span>
+                        <h2>{{ $totalUsers }}</h2>
+                        <span>Total Users</span>
                     </div>
                 </div>
                 <div class="overview-chart">
-                    <canvas id="widgetChart1"></canvas>
                 </div>
             </div>
         </div>
@@ -25,12 +24,11 @@
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
                     <div class="text">
-                        <h2>388,688</h2>
-                        <span>items solid</span>
+                        <h2>{{ $totalPatients }}</h2>
+                        <span>Total Patients</span>
                     </div>
                 </div>
                 <div class="overview-chart">
-                    <canvas id="widgetChart2"></canvas>
                 </div>
             </div>
         </div>
@@ -43,12 +41,11 @@
                         <i class="zmdi zmdi-calendar-note"></i>
                     </div>
                     <div class="text">
-                        <h2>1,086</h2>
-                        <span>this week</span>
+                        <h2>{{ $totalAppointments }}</h2>
+                        <span>Total Appointments</span>
                     </div>
                 </div>
                 <div class="overview-chart">
-                    <canvas id="widgetChart3"></canvas>
                 </div>
             </div>
         </div>
@@ -61,12 +58,11 @@
                         <i class="zmdi zmdi-money"></i>
                     </div>
                     <div class="text">
-                        <h2>$1,060,386</h2>
-                        <span>total earnings</span>
+                        <h2>${{ number_format($totalEarnings, 2) }}</h2>
+                        <span>Total Earnings</span>
                     </div>
                 </div>
                 <div class="overview-chart">
-                    <canvas id="widgetChart4"></canvas>
                 </div>
             </div>
         </div>

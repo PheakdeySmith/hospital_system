@@ -32,6 +32,7 @@
 
     {{-- Javascript Start--}}
         @include('components.dashboard.javascript')
+        @yield('additional-scripts')
     {{-- Javaseript End --}}
 
 </body>

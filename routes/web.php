@@ -29,6 +29,7 @@ Route::get('/client', [FrontController::class, 'client'])->name('client');
 // Dashboard Route
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
+
 // Authentication Routes
 Route::group(['middleware' => 'web'], function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
